@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapcsolat - Gyula-Ring Gokart Pálya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-red-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-red-600 font-bold text-xl">🏎️</span>
+                    </div>
+                    <h1 class="text-3xl font-bold"> <a href="index.html">Gyula-Ring Gokart Pálya</a></h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="hover:text-red-200 transition-colors">Főoldal</a>
+                    <a href="arak.html" class="hover:text-red-200 transition-colors">Árak</a>
+                    <a href="galeria.html" class="hover:text-red-200 transition-colors">Galéria</a>
+                    <a href="foglalás.html" class="hover:text-red-200 transition-colors">Foglalás</a>
+                    <a href="kapcsolat.html" class="text-red-200 font-semibold">Kapcsolat</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-red-50 to-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold text-red-600 mb-4">Kapcsolat</h2>
+            <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                Vedd fel velünk a kapcsolatot! Szívesen válaszolunk minden kérdésedre.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-red-600 mb-6">Írj Nekünk</h3>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Név *</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Email cím *</label>
+                                <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Telefonszám</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Tárgy *</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" required>
+                                <option value="">Válassz témát...</option>
+                                <option value="foglalás">Foglalással kapcsolatos kérdés</option>
+                                <option value="arak">Árakkal kapcsolatos kérdés</option>
+                                <option value="csoportos">Csoportos rendezvény</option>
+                                <option value="ceges">Céges esemény</option>
+                                <option value="panasz">Panasz</option>
+                                <option value="egyeb">Egyéb</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Üzenet *</label>
+                            <textarea rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" placeholder="Írd le kérdésedet vagy üzenetedet..." required></textarea>
+                        </div>
+
+                        <div class="flex items-start space-x-3">
+                            <input type="checkbox" class="mt-1 text-red-600 focus:ring-red-500" required>
+                            <label class="text-gray-700 text-sm">
+                                Elfogadom az <a href="#" class="text-red-600 hover:underline">Adatkezelési Tájékoztatót</a> *
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-red-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-red-700 transition-colors">
+                            Üzenet Küldése
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <!-- Contact Details -->
+                    <div class="bg-red-50 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold text-red-600 mb-6">Elérhetőségek</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-xl">📍</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Címünk</h4>
+                                    <p class="text-gray-600">5700 Gyula,<br>Siórét tanya 42</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-xl">📞</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Telefonszám</h4>
+                                    <p class="text-gray-600">+36 66 561 920<br>+36 20 923 5499</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-xl">✉️</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Email</h4>
+                                    <p class="text-gray-600">info@gyula-ring.hu<br>foglalas@gyula-ring.hu</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Opening Hours -->
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-red-600 mb-6">Nyitvatartás</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="font-semibold text-gray-800">Hétfő - Csütörtök</span>
+                                <span class="text-red-600 font-semibold">14:00 - 20:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="font-semibold text-gray-800">Péntek - Szombat</span>
+                                <span class="text-red-600 font-semibold">10:00 - 21:00</span>
+                            </div>
+                            <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                                <span class="font-semibold text-gray-800">Vasárnap</span>
+                                <span class="text-red-600 font-semibold">10:00 - 20:00</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-red-50 rounded-lg">
+                            <p class="text-sm text-gray-700">
+                                <strong>Megjegyzés:</strong> Ünnepnapokon eltérő nyitvatartás lehet. 
+                                Kérjük, előre érdeklődj telefonon!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-red-600 mb-6">Megközelítés</h3>
+                        <div class="bg-gray-200 rounded-lg h-64 flex items-center justify-center mb-4">
+                            <img src="/placeholder.svg?height=250&width=400" 
+                                 alt="Térkép" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <div class="space-y-2 text-gray-700">
+                            <p><strong>Autóval:</strong> a 44. sz. fő út mellett, Békéscsaba irányába a körforgalomtól 700 m-re</p>
+                            <p><strong>Busszal:</strong> Gyula, Bicere, Iskola  </p>
+                            <p><strong>Parkolás:</strong> Ingyenes parkolóhelyek a helyszínen</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-4 mb-4">
+                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-sm">🏎️</span>
+                </div>
+                <span class="text-xl font-bold">Gyula-Ring Gokart Pálya</span>
+            </div>
+            <p class="text-gray-400">© 2026 Gyula-Ring Gokart Pálya. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+</body>
+</html>

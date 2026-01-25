@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foglalás - Gyula-Ring Gokart Pálya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-red-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-red-600 font-bold text-xl">🏎️</span>
+                    </div>
+                   <h1 class="text-3xl font-bold"> <a href="index.html">Gyula-Ring Gokart Pálya</a></h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="hover:text-red-200 transition-colors">Főoldal</a>
+                    <a href="arak.html" class="hover:text-red-200 transition-colors">Árak</a>
+                    <a href="galeria.html" class="hover:text-red-200 transition-colors">Galéria</a>
+                    <a href="foglalás.html" class="text-red-200 font-semibold">Foglalás</a>
+                    <a href="kapcsolat.html" class="hover:text-red-200 transition-colors">Kapcsolat</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-red-50 to-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold text-red-600 mb-4">Foglalás</h2>
+            <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                Foglald le időpontodat és élvezd a sebességet a Gyula-Ring pályán!
+            </p>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Booking Form -->
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-red-600 mb-6">Foglalási Űrlap</h3>
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Vezetéknév *</label>
+                                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" required>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Keresztnév *</label>
+                                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" required>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Email cím *</label>
+                                    <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" required>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Telefonszám *</label>
+                                    <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" required>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Csomag típusa *</label>
+                                <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" required>
+                                    <option value="">Válassz csomagot...</option>
+                                    <option value="egyeni">Egyéni Menet - 3.500 Ft</option>
+                                    <option value="csoportos">Csoportos Csomag - 15.000 Ft</option>
+                                    <option value="vip">VIP Élmény - 8.500 Ft</option>
+                                    <option value="szuletesnapi">Születésnapi Csomag - 25.000 Ft-tól</option>
+                                    <option value="ceges">Céges Rendezvény - Egyedi árajánlat</option>
+                                </select>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Dátum *</label>
+                                    <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" required>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-semibold mb-2">Időpont *</label>
+                                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" required>
+                                        <option value="">Válassz időpontot...</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="21:00">21:00</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Résztvevők száma</label>
+                                <input type="number" min="1" max="20" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" placeholder="1">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Megjegyzés</label>
+                                <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-red-500 focus:outline-none" placeholder="Különleges kérések, megjegyzések..."></textarea>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <input type="checkbox" class="mt-1 text-red-600 focus:ring-red-500" required>
+                                <label class="text-gray-700 text-sm">
+                                    Elfogadom az <a href="#" class="text-red-600 hover:underline">Általános Szerződési Feltételeket</a> és a <a href="#" class="text-red-600 hover:underline">Adatkezelési Tájékoztatót</a> *
+                                </label>
+                            </div>
+
+                            <button type="submit" class="w-full bg-red-600 text-white py-4 rounded-lg font-semibold text-lg hover:bg-red-700 transition-colors">
+                                Foglalás Elküldése
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Booking Info -->
+                    <div class="space-y-8">
+                        <!-- Quick Info -->
+                        <div class="bg-red-50 rounded-lg p-6">
+                            <h3 class="text-xl font-bold text-red-600 mb-4">Fontos Információk</h3>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start space-x-3">
+                                    <span class="text-red-600 font-bold">•</span>
+                                    <span>Minimum életkor: 8 év, minimum magasság: 130 cm</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="text-red-600 font-bold">•</span>
+                                    <span>Foglalás visszaigazolása email-ben érkezik</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="text-red-600 font-bold">•</span>
+                                    <span>Fizetés a helyszínen készpénzzel vagy kártyával</span>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <span class="text-red-600 font-bold">•</span>
+                                    <span>Lemondás 24 órával korábban ingyenes</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Opening Hours -->
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h3 class="text-xl font-bold text-red-600 mb-4">Nyitvatartás</h3>
+                            <div class="space-y-2 text-gray-700">
+                                <div class="flex justify-between">
+                                    <span class="font-semibold">Hétfő - Csütörtök:</span>
+                                    <span>14:00 - 20:00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-semibold">Péntek - Szombat:</span>
+                                    <span>10:00 - 21:00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-semibold">Vasárnap:</span>
+                                    <span>10:00 - 20:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="bg-white rounded-lg shadow-lg p-6">
+                            <h3 class="text-xl font-bold text-red-600 mb-4">Kapcsolat</h3>
+                            <div class="space-y-3 text-gray-700">
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-red-600">📞</span>
+                                    <span>+36 66 561 920</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-red-600">✉️</span>
+                                    <span>foglalas@gyula-ring.hu</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <span class="text-red-600">📍</span>
+                                    <span>5700 Gyula, Siórét tanya 42</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex items-center justify-center space-x-4 mb-4">
+                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-sm">🏎️</span>
+                </div>
+                <span class="text-xl font-bold">Gyula-Ring Gokart Pálya</span>
+            </div>
+            <p class="text-gray-400">© 2024 Gyula-Ring Gokart Pálya. Minden jog fenntartva.</p>
+        </div>
+    </footer>
+</body>
+</html>
