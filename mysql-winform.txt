@@ -1,0 +1,13 @@
+string csatlakozasiadatok="server=localhost;username=root;database=gokart;password=jelszo";
+mysqlconnection csatlakozasneve = new Mysqlconnection(csatlakozasiadatok)
+
+csatlakozasneve.open();
+for cycle(){}
+csatlakozasneve.close
+
+vagy 
+csatlakozasneve.open();
+string lekerdezes1 = "SELECT niga from rabszolgak"
+mysqlcommand utasitas1 = new mysqlcommand(lekerdezes1,csatlakozasneve)
+mysqldatareader adatolvas = new mysqldatareader
+ 
