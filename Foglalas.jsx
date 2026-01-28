@@ -1,9 +1,9 @@
-import "./styles.css"
+
 function Foglalas()
 {
     return(
         <>
-
+        <p>foglalas infok meg idk</p>
         </>
     )
 }

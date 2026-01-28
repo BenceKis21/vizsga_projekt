@@ -1,9 +1,9 @@
-import "./styles.css"
+
 function Kapcsolat()
 {
     return(
         <>
-
+        <p>kapcsolat infok</p>
         </>
     )
 }

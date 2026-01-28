@@ -1,8 +1,9 @@
 import { BrowserRouter,Route,Routes } from "react-router-dom";
-import "./styles.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import Fooldal from "./Fooldal";
 import Arak from "./Arak";
+import Kapcsolat from "./Kapcsolat";
 function Index()
 {
     return(
@@ -10,7 +11,11 @@ function Index()
             <BrowserRouter>
                 <Header/>
                 <Routes>
-                    <Route path="/Arak" element={<Arak/>}> </Route>
+                    <Route path="/" element={<Fooldal/>}></Route>
+                    <Route path="/Arak" element={<Arak/>}></Route>
+                    <Route path="/Kapcsolat" elemet={<Kapcsolat/>}></Route>
+                    <Route path="/Foglalas" elemet={<Kapcsolat/>}></Route>
+
                 </Routes>
                 <Footer/>
             
