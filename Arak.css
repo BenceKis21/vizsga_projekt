@@ -1,0 +1,160 @@
+.arak {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.arak-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.arak-header h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 0.5rem;
+}
+
+.arak-header p {
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.arak-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.arak-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.arak-card.featured {
+  border: 3px solid #dc2626;
+  position: relative;
+}
+
+.arak-popular {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #dc2626;
+  color: #ffffff;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.arak-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.arak-price {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 0.25rem;
+}
+
+.arak-desc {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.arak-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+.arak-list li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.arak-list li::before {
+  content: "\2713";
+  color: #dc2626;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.arak-btn {
+  display: inline-block;
+  background-color: #dc2626;
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.arak-btn:hover {
+  background-color: #b91c1c;
+}
+
+.arak-extra {
+  background-color: #fef2f2;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.arak-extra h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.arak-extra-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.arak-extra-item {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.arak-extra-item h4 {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.arak-extra-item p {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.arak-extra-item .arak-extra-price {
+  color: #dc2626;
+  font-weight: bold;
+  margin-top: 0.25rem;
+}

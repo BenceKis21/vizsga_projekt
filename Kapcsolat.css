@@ -1,0 +1,110 @@
+.kapcsolat {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.kapcsolat h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #dc2626;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.kapcsolat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.kapcsolat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.kapcsolat-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.kapcsolat-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background-color: #dc2626;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.kapcsolat-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.15rem;
+}
+
+.kapcsolat-item p {
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.kapcsolat-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.kapcsolat-form h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.kapcsolat-form input,
+.kapcsolat-form textarea {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.kapcsolat-form input:focus,
+.kapcsolat-form textarea:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.kapcsolat-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.kapcsolat-btn {
+  background-color: #dc2626;
+  color: #ffffff;
+  padding: 0.65rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.kapcsolat-btn:hover {
+  background-color: #b91c1c;
+}

@@ -1,0 +1,36 @@
+.header {
+  background-color: #dc2626;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-logo {
+  width: 48px;
+  height: 48px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo span {
+  color: #dc2626;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.header-title {
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 0;
+}

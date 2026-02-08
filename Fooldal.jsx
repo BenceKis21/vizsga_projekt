@@ -1,54 +1,50 @@
-function Fooldal()
-{
-    return(<>
-        <section id="home">
-    <div>
-        <h2>Go-Kart pálya, ahol Te lehetsz a nyertes!</h2>
-        <p>
-            Magyarország egyik legkedveltebb gokart pályája várja a sebességmániásokat!
-            Professzionális pálya, biztonságos környezet, felejthetetlen élmények.
-        </p>
-        <div>
-            <button>Foglalj Most!</button>
-            <button>Tudj Meg Többet</button>
-        </div>
-    </div>
-</section>
+import "../Fooldal.css";
 
-<section id="track">
-    <div>
-        <h2>A Pályánkról</h2>
-        <div>
-            <div>
-                <img src="/placeholder.svg" alt="Gokart pálya" />
+function Fooldal() {
+  return (
+    <div className="fooldal">
+      <section className="fooldal-hero">
+        <h2>Go-Kart palya, ahol Te lehetsz a nyertes!</h2>
+        <p>
+          Magyarorszag egyik legkedveltebb gokart palyaja varja a
+          sebessegmaniasokat! Professzionalis palya, biztonsagos kornyezet,
+          felejthetetlen elmenyek.
+        </p>
+      </section>
+
+      <section className="fooldal-track">
+        <h2>A Palyankrol</h2>
+        <div className="fooldal-track-content">
+          <div className="fooldal-image-placeholder">
+            Kep helye (200x200)
+          </div>
+          <div className="fooldal-features">
+            <div className="fooldal-feature">
+              <div className="fooldal-feature-icon">&#10003;</div>
+              <div>
+                <h3>300m hosszu palya</h3>
+                <p>Kihivasokkal teli kanyarok es egyenesek</p>
+              </div>
             </div>
-            <div>
-                <div>
-                    <span>✓</span>
-                    <div>
-                        <h3>300m hosszú pálya</h3>
-                        <p>Kihívásokkal teli kanyarok és egyenesek</p>
-                    </div>
-                </div>
-                <div>
-                    <span>✓</span>
-                    <div>
-                        <h3>Profi gokartok</h3>
-                        <p>Rendszeresen karbantartott, biztonságos járművek</p>
-                    </div>
-                </div>
-                <div>
-                    <span>✓</span>
-                    <div>
-                        <h3>Időmérő rendszer</h3>
-                        <p>Digitális köridő mérés és eredményjelző</p>
-                    </div>
-                </div>
+            <div className="fooldal-feature">
+              <div className="fooldal-feature-icon">&#10003;</div>
+              <div>
+                <h3>Profi gokartok</h3>
+                <p>Rendszeresen karbantartott, biztonsagos jarmuvek</p>
+              </div>
             </div>
+            <div className="fooldal-feature">
+              <div className="fooldal-feature-icon">&#10003;</div>
+              <div>
+                <h3>Idomero rendszer</h3>
+                <p>Digitalis korido meres es eredmenyjelzo</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
     </div>
-</section>
-</>
-    )
+  );
 }
+
 export default Fooldal;

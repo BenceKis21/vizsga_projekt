@@ -1,0 +1,31 @@
+.navbar {
+  background-color: #dc2626;
+  padding: 0.5rem 2rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  border-bottom: 3px solid #b91c1c;
+}
+
+.navbar-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.navbar-link:hover {
+  background-color: #b91c1c;
+}
+
+.navbar-link.active {
+  background-color: #ffffff;
+  color: #dc2626;
+}

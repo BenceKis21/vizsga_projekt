@@ -1,71 +1,76 @@
-import "./styles.css"
+import "../Arak.css";
+
 function Arak() {
-    return (
-        <>
-         <section>
-                <div>
-                    <h2>Áraink</h2>
-                    <p>
-                        Válassz a különböző csomagjaink közül és élvezd a sebességet kedvező áron!
-                    </p>
-                </div>
-            </section>
-            <section>
-                <div>
-                    <div>
-                        <h3>Egyéni Menet</h3>
-                        <p>4.000 Ft / 10 perc</p>
-                        <p>5-10 perces menet</p>
-                        <ul>
-                            <li>Sisak, nyakvédő biztosítva</li>
-                            <li>Időmérés</li>
-                            <li>Eredményjelző</li>
-                        </ul>
-                        <a href="foglalás.html">Foglalás</a>
-                    </div>
-                    <div>
-                        <p>NÉPSZERŰ</p>
-                        <h3>Csoportos Csomag</h3>
-                        <p>12.000 Ft-tól / 10 perc</p>
-                        <p>3-8 fő, akár több mint 10 perc/fő</p>
-                        <ul>
-                            <li>Sisak, nyakvédő biztosítva</li>
-                            <li>Csoportos verseny</li>
-                            <li>Hosszabb menet lehetőség</li>
-                            <li>Felvezető kör kérhető</li>
-                            <li>Rajtrácsos, lámpás indítás (opcionális)</li>
-                            <li>Eredményhirdetés</li>
-                        </ul>
-                        <a href="foglalás.html">Foglalás</a>
-                    </div>
-                    <div>
-                        <h3>Tandem Menet</h3>
-                        <p>4.600 Ft / 10 perc</p>
-                        <p>5-10 perces menet</p>
-                        <ul>
-                            <li>Sisak, nyakvédő biztosítva</li>
-                            <li>Kétszemélyes gokart</li>
-                            <li>Időmérés</li>
-                            <li>Eredményjelző</li>
-                        </ul>
-                        <a href="foglalás.html">Foglalás</a>
-                    </div>
-                    <div>
-                        <h3>Kiegészítő Szolgáltatások</h3>
-                        <div>
-                            <h4>Születésnapi Csomag</h4>
-                            <p>Különleges csomag születésnapi bulira 8+ fő részére</p>
-                            <p>25.000 Ft-tól</p>
-                        </div>
-                        <div>
-                            <h4>Céges Rendezvény</h4>
-                            <p>Csapatépítő programok és céges versenyek</p>
-                            <p>Egyedi árajánlat</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </>
-    )
+  return (
+    <div className="arak">
+      <section className="arak-header">
+        <h2>Araink</h2>
+        <p>
+          Valassz a kulonbozo csomagjaink kozul es elvezd a sebességet kedvezo
+          aron!
+        </p>
+      </section>
+
+      <div className="arak-grid">
+        <div className="arak-card">
+          <h3>Egyeni Menet</h3>
+          <div className="arak-price">4.000 Ft</div>
+          <div className="arak-desc">10 perces menet</div>
+          <ul className="arak-list">
+            <li>Sisak, nyakvedő biztositva</li>
+            <li>Idomeres</li>
+            <li>Eredmenyjelzo</li>
+          </ul>
+          <button className="arak-btn">Foglalas</button>
+        </div>
+
+        <div className="arak-card featured">
+          <div className="arak-popular">NEPSZERU</div>
+          <h3>Csoportos Csomag</h3>
+          <div className="arak-price">12.000 Ft-tol</div>
+          <div className="arak-desc">3-8 fo, 10+ perc/fo</div>
+          <ul className="arak-list">
+            <li>Sisak, nyakvedő biztositva</li>
+            <li>Csoportos verseny</li>
+            <li>Hosszabb menet lehetoseg</li>
+            <li>Felvezeto kor kerheto</li>
+            <li>Lampas inditas (opcionalis)</li>
+            <li>Eredmenyhirdetes</li>
+          </ul>
+          <button className="arak-btn">Foglalas</button>
+        </div>
+
+        <div className="arak-card">
+          <h3>Tandem Menet</h3>
+          <div className="arak-price">4.600 Ft</div>
+          <div className="arak-desc">10 perces menet</div>
+          <ul className="arak-list">
+            <li>Sisak, nyakvedő biztositva</li>
+            <li>Ketszemelyesgokart</li>
+            <li>Idomeres</li>
+            <li>Eredmenyjelzo</li>
+          </ul>
+          <button className="arak-btn">Foglalas</button>
+        </div>
+      </div>
+
+      <div className="arak-extra">
+        <h3>Kiegeszito Szolgaltatasok</h3>
+        <div className="arak-extra-grid">
+          <div className="arak-extra-item">
+            <h4>Szuletesnapi Csomag</h4>
+            <p>Kulonleges csomag szuletesnapi bulira 8+ fo reszere</p>
+            <p className="arak-extra-price">25.000 Ft-tol</p>
+          </div>
+          <div className="arak-extra-item">
+            <h4>Ceges Rendezvenyek</h4>
+            <p>Csapatepito programok es ceges versenyek</p>
+            <p className="arak-extra-price">Egyedi arajanlat</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
+
 export default Arak;

@@ -1,0 +1,66 @@
+.koridok {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.koridok h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #dc2626;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.koridok-subtitle {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.koridok-table-wrapper {
+  overflow-x: auto;
+}
+
+.koridok-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.koridok-table thead {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.koridok-table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.koridok-table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.koridok-table tbody tr:nth-child(even) {
+  background-color: #fef2f2;
+}
+
+.koridok-table tbody tr:hover {
+  background-color: #fee2e2;
+}
+
+.koridok-info {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #fef2f2;
+  border-left: 4px solid #dc2626;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #374151;
+}

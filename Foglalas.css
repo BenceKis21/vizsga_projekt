@@ -1,0 +1,80 @@
+.foglalas {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.foglalas h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #dc2626;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.foglalas-subtitle {
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.foglalas-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.foglalas-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.foglalas-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+}
+
+.foglalas-group input,
+.foglalas-group select,
+.foglalas-group textarea {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.foglalas-group input:focus,
+.foglalas-group select:focus,
+.foglalas-group textarea:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.foglalas-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.foglalas-submit {
+  background-color: #dc2626;
+  color: #ffffff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.foglalas-submit:hover {
+  background-color: #b91c1c;
+}
