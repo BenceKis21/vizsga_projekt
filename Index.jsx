@@ -26,7 +26,7 @@ function Index()
     )
 
 }*/
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -39,34 +39,22 @@ import Kapcsolat from "./Kapcsolat";
 import "../Index.css";
 
 function Index() {
-  const [currentPage, setCurrentPage] = useState("fooldal");
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case "fooldal":
-        return <Fooldal />;
-      case "arak":
-        return <Arak />;
-      case "foglalas":
-        return <Foglalas />;
-      case "galeria":
-        return <Galeria />;
-      case "koridok":
-        return <Koridok />;
-      case "kapcsolat":
-        return <Kapcsolat />;
-      default:
-        return <Fooldal />;
-    }
-  };
-
   return (
-    <div className="app-wrapper">
-      <Header />
-      <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
-      <main className="app-content">{renderPage()}</main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+
+        <Header />
+        <Navbar />
+          <Routes>
+            <Route path="/" element={<Fooldal />} />
+            <Route path="/arak" element={<Arak />} />
+            <Route path="/foglalas" element={<Foglalas />} />
+            <Route path="/galeria" element={<Galeria />} />
+            <Route path="/koridok" element={<Koridok />} />
+            <Route path="/kapcsolat" element={<Kapcsolat />} />
+          </Routes>
+        <Footer />
+    </BrowserRouter>
   );
 }
+
 export default Index;

@@ -1,5 +1,5 @@
 import "../Fooldal.css";
-
+import probaKep from "./proba2.png"
 function Fooldal() {
   return (
     <div className="fooldal">
@@ -16,9 +16,9 @@ function Fooldal() {
         <h2>A Palyankrol</h2>
         <div className="fooldal-track-content">
           <div className="fooldal-image-placeholder">
-            Kep helye (200x200)
+            <img src={probaKep} alt="xd"/>
           </div>
-          <div className="fooldal-features">
+          <div className="fooldal-features"> 
             <div className="fooldal-feature">
               <div className="fooldal-feature-icon">&#10003;</div>
               <div>

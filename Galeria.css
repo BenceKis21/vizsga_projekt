@@ -140,3 +140,77 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+.galeria {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.galeria-categories {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.galeria-cat-btn {
+  padding: 8px 16px;
+  border: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.galeria-cat-btn.active,
+.galeria-cat-btn:hover {
+  background: #00c896;
+}
+
+/* 🔥 RESPONSIVE GRID */
+.galeria-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.galeria-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+
+.galeria-item:hover img {
+  transform: scale(1.05);
+}
+
+.galeria-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.galeria-item:hover .galeria-overlay {
+  opacity: 1;
+}
