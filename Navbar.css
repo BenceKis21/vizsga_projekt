@@ -1,10 +1,100 @@
 .navbar {
   background-color: #dc2626;
-  padding: 0.5rem 2rem 1rem;
+  padding: 0.5rem 2rem;
   display: flex;
-  justify-content: flex-end;
-  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 3px solid #b91c1c;
+  position: relative;
+  min-height: 50px;
+}
+
+/* HAMBURGER IKON FIXÁLÁSA */
+.navbar-hamburger {
+  display: none; /* Alapból rejtve Desktopon */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1005;
+}
+
+/* Ez hiányzott: a vonalak konkrét mérete */
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animáció az X-szé váláshoz */
+.hamburger-line.open:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger-line.open:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-line.open:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* WINDOWS-SZERŰ PROFIL IKON */
+.windows-profile-icon {
+  width: 35px;
+  height: 35px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid #b91c1c;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.windows-profile-icon:hover {
+  transform: scale(1.1);
+}
+
+.user-head {
+  width: 10px;
+  height: 10px;
+  background-color: #dc2626;
+  border-radius: 50%;
+  margin-bottom: 2px;
+}
+
+.user-body {
+  width: 18px;
+  height: 10px;
+  background-color: #dc2626;
+  border-radius: 10px 10px 0 0;
+}
+
+/* MENÜ ELRENDEZÉS */
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  margin-right: 2rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbar-auth {
+  display: none; /* Laptopon a hamburger/profil mögé rejtjük */
 }
 
 .navbar-link {
@@ -15,17 +105,64 @@
   padding: 0.4rem 0.75rem;
   border-radius: 4px;
   transition: background-color 0.3s;
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-family: inherit;
 }
 
 .navbar-link:hover {
   background-color: #b91c1c;
 }
 
-.navbar-link.active {
-  background-color: #ffffff;
-  color: #dc2626;
+/* RESPONSIVE: 1024px ALATT */
+@media (max-width: 1024px) {
+  .navbar-hamburger {
+    display: flex; /* Itt jelenik meg */
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    left: -80%;
+    width: 75%;
+    height: 100vh;
+    background-color: #dc2626;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 20px 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1002;
+    margin-right: 0;
+  }
+
+  .navbar-menu.open {
+    left: 0;
+  }
+
+  .navbar-auth {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-link {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1001;
+  }
 }

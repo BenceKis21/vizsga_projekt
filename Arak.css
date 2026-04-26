@@ -1,9 +1,11 @@
+/* ALAPBEÁLLÍTÁSOK */
 .arak {
   background-color: #ffffff;
   color: #1a1a1a;
-  max-width: 900px;
+  max-width: 1200px; /* Megnövelve, hogy 3 kártya kényelmesen elférjen egymás mellett */
   margin: 0 auto;
   padding: 2rem;
+  box-sizing: border-box;
 }
 
 .arak-header {
@@ -23,11 +25,15 @@
   font-size: 1rem;
 }
 
+/* KÁRTYA RÁCS - Mobilon egymás alatt, asztalin egy sorban */
 .arak-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column; /* Alapértelmezett: mobil (egymás alatt) */
+  align-items: center;
   gap: 1.5rem;
-  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .arak-card {
@@ -37,6 +43,16 @@
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.arak-card:hover {
+  transform: translateY(-5px);
 }
 
 .arak-card.featured {
@@ -80,7 +96,7 @@
 .arak-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
   text-align: left;
 }
 
@@ -115,10 +131,12 @@
   background-color: #b91c1c;
 }
 
+/* KIEGÉSZÍTŐ SZOLGÁLTATÁSOK */
 .arak-extra {
   background-color: #fef2f2;
   border-radius: 8px;
   padding: 1.5rem;
+  margin-top: 3rem;
 }
 
 .arak-extra h3 {
@@ -131,7 +149,7 @@
 
 .arak-extra-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr; /* Mobilon 1 oszlop */
   gap: 1rem;
 }
 
@@ -157,4 +175,23 @@
   color: #dc2626;
   font-weight: bold;
   margin-top: 0.25rem;
+}
+
+/* --- ASZTALI NÉZET ÚJÍTÁSOK (1024px felett) --- */
+@media (min-width: 1024px) {
+  .arak-grid {
+    flex-direction: row; /* Egy sorba teszi a kártyákat */
+    justify-content: center;
+    align-items: stretch; /* Minden kártya egyforma magas lesz */
+    flex-wrap: nowrap;
+  }
+
+  .arak-card {
+    flex: 1; /* Egyenletes szélesség elosztás */
+    max-width: 380px;
+  }
+
+  .arak-extra-grid {
+    grid-template-columns: 1fr 1fr; /* Asztalin 2 oszlopos kiegészítő lista */
+  }
 }

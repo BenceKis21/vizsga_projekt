@@ -1,18 +1,17 @@
+import React, { useState, useEffect } from "react";
 import "../Koridok.css";
 
 function Koridok() {
-  const results = [
-    { pos: 1, time: "0:42.31", date: "2026.06.25" },
-    { pos: 2, time: "0:43.05", date: "2026.07.12" },
-    { pos: 3, time: "0:43.88", date: "2026.07.03" },
-    { pos: 4, time: "0:44.12", date: "2026.08.01" },
-    { pos: 5, time: "0:44.67", date: "2026.06.30" },
-    { pos: 6, time: "0:45.20", date: "2026.07.22" },
-    { pos: 7, time: "0:45.89", date: "2026.08.10" },
-    { pos: 8, time: "0:46.33", date: "2026.07.15" },
-    { pos: 9, time: "0:46.71", date: "2026.08.20" },
-    { pos: 10, time: "0:47.02", date: "2026.06.28" },
-  ];
+  // Az állapot kezelése a lekért adatoknak
+  const [results, setResults] = useState([]);
+
+  useEffect(() => {
+    // Adatlekérés megvalósítása
+    fetch("http://localhost:8000/api/koridok")
+      .then((response) => response.json())
+      .then((data) => setResults(data))
+      .catch((error) => console.error("Hiba az adatok lekérésekor:", error));
+  }, []); // Üres függőségi lista: csak egyszer fut le mountoláskor
 
   return (
     <div className="koridok">
@@ -32,12 +31,12 @@ function Koridok() {
             </tr>
           </thead>
           <tbody>
-            {results.map((r) => (
-              <tr key={r.pos}>
-                <td>{r.pos}.</td>
-                <td>{r.num}</td>
-                <td>{r.time}</td>
-                <td>{r.date}</td>
+            {results.map((r,pos) => (
+              <tr key={pos}>
+                <td>{pos+1}.</td>
+                <td>{r.kocsi_rajtszama}</td>
+                <td>{r.futott_korido}</td>
+                <td>{r.datum}</td>
               </tr>
             ))}
           </tbody>

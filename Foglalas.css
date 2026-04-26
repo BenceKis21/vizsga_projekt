@@ -78,3 +78,12 @@
 .foglalas-submit:hover {
   background-color: #b91c1c;
 }
+.form-container {
+  width: 90%; /* Fix pixel helyett százalék! */
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, select, textarea {
+  width: 100%; /* Hogy ne lógjanak ki a keretből */
+}

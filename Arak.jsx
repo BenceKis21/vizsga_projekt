@@ -1,5 +1,5 @@
 import "../Arak.css";
-
+import { Link } from "react-router-dom";
 function Arak() {
   return (
     <div className="arak">
@@ -21,7 +21,9 @@ function Arak() {
             <li>Idomeres</li>
             <li>Eredmenyjelzo</li>
           </ul>
+           <Link to="/foglalas">
           <button className="arak-btn">Foglalas</button>
+          </Link>
         </div>
 
         <div className="arak-card featured">
@@ -33,11 +35,13 @@ function Arak() {
             <li>Sisak, nyakvedő biztositva</li>
             <li>Csoportos verseny</li>
             <li>Hosszabb menet lehetoseg</li>
-            <li>Felvezeto kor kerheto</li>
-            <li>Lampas inditas (opcionalis)</li>
+            <li>Felvezeto kor</li>
+            <li>Lampas inditas</li>
             <li>Eredmenyhirdetes</li>
           </ul>
+          <Link to="/foglalas">
           <button className="arak-btn">Foglalas</button>
+          </Link>
         </div>
 
         <div className="arak-card">
@@ -46,11 +50,13 @@ function Arak() {
           <div className="arak-desc">10 perces menet</div>
           <ul className="arak-list">
             <li>Sisak, nyakvedő biztositva</li>
-            <li>Ketszemelyesgokart</li>
+            <li>Ketszemelyes gokart</li>
             <li>Idomeres</li>
             <li>Eredmenyjelzo</li>
           </ul>
+           <Link to="/foglalas">
           <button className="arak-btn">Foglalas</button>
+          </Link>
         </div>
       </div>
 
@@ -65,7 +71,9 @@ function Arak() {
           <div className="arak-extra-item">
             <h4>Ceges Rendezvenyek</h4>
             <p>Csapatepito programok es ceges versenyek</p>
+             <Link to="/kapcsolat">
             <p className="arak-extra-price">Egyedi arajanlat</p>
+            </Link>
           </div>
         </div>
       </div>

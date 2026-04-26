@@ -1,14 +1,16 @@
+/* ALAPBEÁLLÍTÁSOK */
 .galeria {
   background-color: #ffffff;
   color: #1a1a1a;
-  max-width: 900px;
+  max-width: 1200px; /* Megnövelve, hogy a 4 oszlop kényelmesen elférjen */
   margin: 0 auto;
-  padding: 2rem;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .galeria-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
 }
 
 .galeria-header h2 {
@@ -23,135 +25,7 @@
   font-size: 1rem;
 }
 
-.galeria-categories {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.galeria-cat-btn {
-  padding: 0.4rem 1.25rem;
-  border-radius: 999px;
-  border: 2px solid #dc2626;
-  background-color: #ffffff;
-  color: #dc2626;
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.galeria-cat-btn:hover {
-  background-color: #fef2f2;
-}
-
-.galeria-cat-btn.active {
-  background-color: #dc2626;
-  color: #ffffff;
-}
-
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.galeria-item {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  background-color: #f3f4f6;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.galeria-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-}
-
-.galeria-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.galeria-placeholder-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: #9ca3af;
-  font-size: 0.85rem;
-}
-
-.galeria-placeholder-icon svg {
-  width: 36px;
-  height: 36px;
-  stroke: #d1d5db;
-}
-
-.galeria-item-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
-  padding: 0.75rem;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.galeria-item:hover .galeria-item-overlay {
-  opacity: 1;
-}
-
-.galeria-item-overlay span {
-  color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.galeria-info {
-  text-align: center;
-  background-color: #fef2f2;
-  border-radius: 8px;
-  padding: 1.5rem;
-}
-
-.galeria-info h3 {
-  font-size: 1.15rem;
-  font-weight: bold;
-  color: #dc2626;
-  margin-bottom: 0.5rem;
-}
-
-.galeria-info p {
-  color: #4b5563;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.galeria {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.galeria-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
+/* KATEGÓRIA GOMBOK */
 .galeria-categories {
   display: flex;
   justify-content: center;
@@ -161,56 +35,125 @@
 }
 
 .galeria-cat-btn {
-  padding: 8px 16px;
-  border: none;
-  background: #222;
-  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  border: 2px solid #dc2626;
+  background-color: #ffffff;
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
-.galeria-cat-btn.active,
 .galeria-cat-btn:hover {
-  background: #00c896;
+  background-color: #fef2f2;
+  transform: translateY(-2px);
 }
 
-/* 🔥 RESPONSIVE GRID */
+.galeria-cat-btn.active {
+  background-color: #dc2626;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+}
+
+/* 🔥 OKOS GRID RENDSZER */
 .galeria-grid {
   display: grid;
   gap: 20px;
+  /* Alapértelmezett: Mobil nézetben 1 oszlop, ami minimum 250px */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
 }
 
+/* --- ASZTALI NÉZET (4 oszlopos fix elrendezés) --- */
+@media (min-width: 1024px) {
+  .galeria-grid {
+    /* Itt kényszerítjük a 4 oszlopot */
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+/* KÉP KÁRTYÁK */
 .galeria-item {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
 }
 
 .galeria-item img {
   width: 100%;
-  height: 250px;
+  height: 250px; /* Fix magasság a szabályos 4x4-es rácshoz */
   object-fit: cover;
   display: block;
-  transition: 0.4s;
+  transition: transform 0.5s ease;
+}
+
+.galeria-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .galeria-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-.galeria-overlay {
+/* OVERLAY (SZÖVEG A KÉPEN) */
+.galeria-item-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
   opacity: 0;
-  transition: 0.3s;
+  transition: opacity 0.3s ease;
 }
 
-.galeria-item:hover .galeria-overlay {
+.galeria-item:hover .galeria-item-overlay {
   opacity: 1;
+}
+
+.galeria-item-overlay span {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+}
+
+.galeria-item:hover .galeria-item-overlay span {
+  transform: translateY(0);
+}
+
+/* INFÓ DOBOZ AZ OLDAL ALJÁN */
+.galeria-info {
+  text-align: center;
+  background-color: #fef2f2;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 3rem;
+  border: 1px solid #fee2e2;
+}
+
+.galeria-info h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 0.75rem;
+}
+
+.galeria-info p {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
 }

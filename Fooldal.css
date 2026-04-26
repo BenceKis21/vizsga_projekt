@@ -98,3 +98,44 @@
   color: #4b5563;
   font-size: 0.95rem;
 }
+/* ... az eddigi stílusaid maradnak ... */
+
+.fooldal-track-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  /* Fontos: engedjük a törést, ha mégis maradna a flex */
+  flex-wrap: wrap; 
+}
+
+/* MOBIL FIX 414px és alatta (vagy általánosan tabletekig) */
+@media (max-width: 768px) {
+  .fooldal {
+    padding: 1rem; /* Kisebb belső margó, hogy maradjon hely a tartalomnak */
+  }
+
+  .fooldal-hero h2 {
+    font-size: 1.5rem; /* Kisebb cím, hogy ne törjön 3 sorba */
+  }
+
+  .fooldal-track-content {
+    flex-direction: column; /* Egymás alá rakja a képet és a funkciókat */
+    align-items: center;    /* Középre igazítja őket */
+    gap: 1.5rem;
+  }
+
+  .fooldal-image-placeholder {
+    /* Mobilon ne legyen fix széles, ha nem muszáj, de maradjon látható */
+    width: 100%; 
+    max-width: 250px; 
+    min-width: unset; /* Kikapcsoljuk a korlátozást */
+  }
+
+  .fooldal-features {
+    width: 100%;
+  }
+
+  .fooldal-feature {
+    text-align: left; /* A szöveg maradjon balra igazítva a pipák mellett */
+  }
+}

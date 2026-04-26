@@ -20,7 +20,7 @@ function Kapcsolat() {
             <div className="kapcsolat-icon">&#9993;</div>
             <div>
               <h3>Email</h3>
-              <p>info@gyula-ring.hu</p>
+              <p>info@gokart.hu</p>
             </div>
           </div>
           <div className="kapcsolat-item">

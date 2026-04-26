@@ -27,6 +27,7 @@ function Index()
 
 }*/
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -36,24 +37,65 @@ import Foglalas from "./Foglalas";
 import Koridok from "./Koridok";
 import Galeria from "./Galeria";
 import Kapcsolat from "./Kapcsolat";
+import Profil from "./Profil";
 import "../Index.css";
+import Bejelentkezes from "./Bejelentkezes";
+import Regisztral from "./Regisztral";
+import Betolt from "./Betolt";
+import AdminPanel from "./AdminPanel";
 
 function Index() {
-  return (
-    <BrowserRouter>
+  const [showIntro, setShowIntro] = useState(true);
+  // ÚJ: Itt tároljuk a bejelentkezett felhasználót
+  const [user, setUser] = useState(null);
 
-        <Header />
-        <Navbar />
-          <Routes>
-            <Route path="/" element={<Fooldal />} />
-            <Route path="/arak" element={<Arak />} />
-            <Route path="/foglalas" element={<Foglalas />} />
-            <Route path="/galeria" element={<Galeria />} />
-            <Route path="/koridok" element={<Koridok />} />
-            <Route path="/kapcsolat" element={<Kapcsolat />} />
-          </Routes>
-        <Footer />
-    </BrowserRouter>
+  const handleLogin = (userData) => {
+    setUser(userData);
+    console.log("Bejelentkezett felhasználó:", userData);
+  };
+ const handleRegister = (userData) => {
+    setUser(userData); // Elmenti a regisztrációkor megadott adatokat a 'user' state-be
+  console.log("Sikeres regisztráció:", userData);
+};
+
+  return (
+    <>
+      {showIntro && <Betolt onComplete={() => setShowIntro(false)} />}
+      
+      <div 
+        className="app-wrapper" 
+        style={{
+          opacity: showIntro ? 0 : 1,
+          transition: 'opacity 0.5s ease-in'
+        }}
+      >
+        <BrowserRouter>
+          <Header />
+          <Navbar />
+          <main className="app-content"> 
+            <Routes>
+              <Route path="/" element={<Fooldal />} />
+              <Route path="/arak" element={<Arak />} />
+              <Route path="/foglalas" element={<Foglalas />} />
+              <Route path="/galeria" element={<Galeria />} />
+              <Route path="/koridok" element={<Koridok />} />
+              <Route path="/kapcsolat" element={<Kapcsolat />} />
+              <Route path="/admin" element={<AdminPanel />} />
+              
+              
+              {/* BŐVÍTVE: Átadjuk a user adatokat a profilnak */}
+              <Route path="/profil" element={<Profil user={user} />} />
+              
+              {/* BŐVÍTVE: Bekötjük az onLogin függvényt */}
+              <Route path="/bejelentkezes" element={<Bejelentkezes onLogin={handleLogin} />} />
+            
+              <Route path="/regisztracio" element={<Regisztral onRegister={handleRegister} />} />
+            </Routes>
+          </main>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </>
   );
 }
 

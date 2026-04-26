@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-col">
-          <h3>Gyula-Ring Gokart Palya</h3>
+          <h3>Gokart Palya</h3>
           <p>
             A legjobb gokart elmeny Gyulan es kornyeken.
             Varjuk kezdoktol a profikig mindenkit!
@@ -16,7 +16,7 @@ function Footer() {
           <p>
             5700 Gyula, Palya utca 1.<br />
             Telefon: +36 66 123 456<br />
-            Email: info@gyula-ring.hu
+            Email: info@gokart.hu
           </p>
         </div>
         <div className="footer-col">
@@ -29,7 +29,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        &copy; 2026 Gyula-Ring Gokart Palya. Minden jog fenntartva.
+        &copy; 2026 Go-Kart Palya. Minden jog fenntartva.
       </div>
     </footer>
   );

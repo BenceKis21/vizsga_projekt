@@ -5,14 +5,12 @@ function Foglalas() {
 
   // STATE
   let [ujFoglalas, setUjFoglalas] = useState({
-    vezeteknev: "",
-    keresztnev: "",
+    nev: "",
     email: "",
-    telefonszam: "",
+    telefon: "",
     csomag: "",
-    idopont: "",
-    foSzam: 1,
-    megjegyzes: ""
+    foglalt_idopont: "",
+    resztvevok: 1
   });
 
   // INPUT KEZELŐ
@@ -32,7 +30,7 @@ function Foglalas() {
   let feltoltes = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:8000/foglalasok", {
+    fetch("http://localhost:8000/api/foglal", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -48,8 +46,8 @@ function Foglalas() {
       .then(() => {
         alert("Sikeres foglalas!");
       })
-      .catch(() => {
-        alert("Sikertelen foglalas!");
+      .catch((error) => {
+        alert("Sikertelen foglalas!",error);
       });
   };
 
@@ -61,24 +59,14 @@ function Foglalas() {
       </p>
 
       <form className="foglalas-form" onSubmit={feltoltes}>
-        
-        <div className="foglalas-group">
-          <label>Vezeteknev</label>
-          <input 
-            type="text" 
-            name="vezeteknev"
-            onChange={esemenykezelo}
-            placeholder="pl. Nagy" 
-          />
-        </div>
 
         <div className="foglalas-group">
-          <label>Keresztnev</label>
+          <label>Teljes Nev</label>
           <input 
             type="text" 
-            name="keresztnev"
+            name="nev"
             onChange={esemenykezelo}
-            placeholder="pl. Peter" 
+            placeholder="pl. Nagy Peter" 
           />
         </div>
 
@@ -95,8 +83,8 @@ function Foglalas() {
         <div className="foglalas-group">
           <label>Telefonszam</label>
           <input 
-            type="tel" 
-            name="telefonszam"
+            type="text" 
+            name="telefon"
             onChange={esemenykezelo}
             placeholder="+36 30 123 4567" 
           />
@@ -109,9 +97,9 @@ function Foglalas() {
             onChange={esemenykezelo}
           >
             <option value="">Valassz csomagot...</option>
-            <option value="egyeni">Egyeni Menet - 4.000 Ft</option>
-            <option value="csoportos">Csoportos Csomag - 12.000 Ft-tol</option>
-            <option value="tandem">Tandem Menet - 4.600 Ft</option>
+            <option value="0">Egyeni Menet - 4.000 Ft</option>
+            <option value="1">Csoportos Csomag - 12.000 Ft-tol</option>
+            <option value="2">Tandem Menet - 4.600 Ft</option>
           </select>
         </div>
 
@@ -119,7 +107,7 @@ function Foglalas() {
           <label>Kivant idopont</label>
           <input 
             type="datetime-local"
-            name="idopont"
+            name="foglalt_idopont"
             onChange={esemenykezelo}
           />
         </div>
@@ -128,22 +116,15 @@ function Foglalas() {
           <label>Resztvevok szama</label>
           <input 
             type="number" 
-            name="rvSzam"
+            name="resztvevok"
             min="1" 
-            max="20"
+            max="10"
             onChange={esemenykezelo}
             placeholder="1" 
           />
         </div>
 
-        <div className="foglalas-group">
-          <label>Megjegyzes</label>
-          <textarea 
-            name="megjegyzes"
-            onChange={esemenykezelo}
-            placeholder="Egyeb keresek, megjegyzesek..."
-          ></textarea>
-        </div>
+        
 
         <button type="submit" className="foglalas-submit">
           Foglalas elkuldese
@@ -152,6 +133,6 @@ function Foglalas() {
       </form>
     </div>
   );
-}
+}//regisztralas checkbox!!!!
 
 export default Foglalas;

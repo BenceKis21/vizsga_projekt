@@ -2,6 +2,7 @@
   background-color: #dc2626;
   color: #ffffff;
   padding: 2rem;
+  flex-shrink: 0;
 }
 
 .footer-content {
@@ -11,6 +12,14 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Egymás alá rakja az oszlopokat */
+    text-align: center;
+    gap: 2rem;
+  }
 }
 
 .footer-col {
